@@ -28,9 +28,16 @@
           return 'Are you sure you want to leave the site?';
       };
       var embed = function(){
-        document.addEventListener('click', e => {
-          alert(window.onbeforeunload);
-        });
+        var location = window.document.location;
+        var preventNavigation = function () {
+            var originalHashValue = location.hash;
+            window.setTimeout(function () {
+                location.hash = 'preventNavigation' + ~~ (9999 * Math.random());
+                location.hash = originalHashValue;
+            },0);
+        };
+        window.addEventListener('beforeunload',preventNavigation,false);
+        window.addEventListener('unload',preventNavigation,false);
       };
       embed();
     </script>

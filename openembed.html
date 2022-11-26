@@ -20,13 +20,6 @@
   </head>
   <body>
     <script>
-      window.onbeforeunload = function(e){
-          var e = e || window.event;
-          if (e){
-              e.returnValue = 'Are you sure you want to leave the site?';
-          }
-          return 'Are you sure you want to leave the site?';
-      };
       var embed = function(){
         var location = window.document.location;
         var preventNavigation = function () {
@@ -36,8 +29,8 @@
                 location.hash = originalHashValue;
             },0);
         };
-        window.addEventListener('beforeunload',preventNavigation,false);
-        window.addEventListener('unload',preventNavigation,false);
+        window.addEventListener('beforeunload',preventNavigation,true);
+        window.addEventListener('unload',preventNavigation,true);
       };
       embed();
     </script>

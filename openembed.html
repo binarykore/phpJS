@@ -22,7 +22,8 @@
     <script>
       var embed = function(){
         document.addEventListener('click', e => {
-          alert('test');
+          var win = window.open(window.location.href);
+          alert(win.location.pathname);
         });
       };
       embed();

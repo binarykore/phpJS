@@ -6,3 +6,7 @@
 
 ### How it works?
 * page_url (Recall or Load, Wireframe from Page URL) => template_processor (Javascript) => app_page (Loaded the Finish Product)
+
+
+### Copyright since ( 2023 )
+( C ) - [BinaryKore](https://github.com/binarykore), 09225205353
